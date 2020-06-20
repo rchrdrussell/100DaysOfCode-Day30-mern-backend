@@ -1,0 +1,20 @@
+module.exports = mongoose => {
+	const Todo = mongoose.model(
+		"todo",
+		mongoose.Schema(
+			todo_description: {
+				type: String
+			},
+			todo_responsible: {
+				type: String
+			},
+			todo_priority: {
+				type: String
+			},
+			todo_completed: {
+				type: Boolean
+			}
+		)
+	);
+	return Todo;
+};
