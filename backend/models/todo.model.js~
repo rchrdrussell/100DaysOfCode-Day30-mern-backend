@@ -10,6 +10,10 @@ const TodoSchema = new mongoose.Schema({
 const Todo = mongoose.model('Todo', TodoSchema);
 
 module.exports = Todo;
+console.log(module.exports);
+
+//Fix:
+//module.exports = mongoose => { return Todo };
 
 /*module.exports = mongoose => {
 	const Todo = mongoose.model("Todo", mongoose.Schema({

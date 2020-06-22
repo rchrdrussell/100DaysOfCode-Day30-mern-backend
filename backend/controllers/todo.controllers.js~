@@ -1,5 +1,5 @@
 const db = require('../models');
-const TodoDB = db.tododatabase;
+const TodoDB = db.todos;
 //Get list
 exports.findAll = (req, res) => {
 	const title = req.query.title;
