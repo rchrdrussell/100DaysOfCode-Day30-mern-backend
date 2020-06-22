@@ -23,6 +23,8 @@ db.mongoose
 	  process.exit();
   });
 
+require('./routes/todo.routes')(app);
+
 const PORT = 3000;
 app.listen(PORT, () => {
 	console.log(`Connected to port: ${PORT}`);

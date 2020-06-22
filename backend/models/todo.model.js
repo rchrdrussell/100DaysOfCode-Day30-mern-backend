@@ -10,3 +10,17 @@ const TodoSchema = new mongoose.Schema({
 const Todo = mongoose.model('Todo', TodoSchema);
 
 module.exports = Todo;
+//Fix:
+//module.exports = mongoose => { return Todo };
+
+/*module.exports = mongoose => {
+	const Todo = mongoose.model("Todo", mongoose.Schema({
+		todo_description: String,
+		todo_responsible: String,
+		todo_priority: String,
+		todo_completed: Boolean
+	})
+	);
+
+	return Todo
+};*/
